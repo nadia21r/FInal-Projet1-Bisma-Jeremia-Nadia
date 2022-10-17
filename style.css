@@ -1,0 +1,59 @@
+.nav-item {
+    padding: 10px;
+}
+
+.animated {
+    animation-delay: 0.5s;
+}
+
+.carousel-caption h5 {
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.carousel-caption p {
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+.carousel-caption button {
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.carousel-inner {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-40%);
+}
+
+.text-muted {
+    font-size: large;
+}
+
+img {
+    filter: blur(3px);
+}
+
+@media screen and (max-width: 760px) {
+    .carousel-caption h5 {
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    .carousel-inner {
+        height: 40vh;
+    }
+    .text-muted {
+        font-size: small;
+    }
+    img {
+        height: 40vh;
+    }
+}
