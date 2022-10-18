@@ -37,7 +37,7 @@
     font-size: large;
 }
 
-img {
+.img {
     filter: blur(3px);
 }
 
@@ -90,4 +90,16 @@ img {
 
 #popup:target .popup-content{
     opacity: 1;
+}
+
+header {
+    background: url(assets/carousel-2.jpeg);
+    background-size: cover;
+    background-position: center;
+    min-height: 1000px;
+}
+
+.space {
+    padding: 20px;
+    margin: 20px;
 }
