@@ -22,10 +22,10 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact us</a>
+              <a class="nav-link" href="#about">About us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About us</a>
+              <a class="nav-link" href="#contact">Contact us</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="Portofolio.html">Portofolio</a>
@@ -112,37 +112,75 @@
     </div>
 
     <section id="about">
+      <div>
+        <h1 class=" text-center display-3 fw-bold mb-3">About Us</h1>
+        <p class="text-muted lead mb-6 ml-5">2018 was the beginning of the formation of Our Company, our company was formed starting from frequent gatherings and our high enthusiasm to build the world of websites in industry 4.0. our company accepts application and website creation services. In general, Website creation is implemented in a newly formed company for branding of the company.</p>
 
-    </section>
-
-    <section id="contact" >
-      <div class="row container-fluid justify-content-center">
-      <h1 style="text-align: center;">contact us</h1>
-              <div class="col-md-7 shadow rounded p-5">
-            <div class="row">
-                <div class="col mb-6">
-                    <label class="form-label">Nama Depan</label>
-                    <input type="text" class= "form-control" placeholder="Nama Depan">
-                </div>
-                <div class="col mb-6">
-                    <label class="form-label">Nama Belakang</label>
-                    <input type="text" class="form-control" placeholder="Nama Belakang">
-                </div>
-            </div>
-            <div class="mb-6">
-                <label class="form-labe1">Email</label>
-                <input type= "text" class= "form-control" placeholder="name@email.com">
-            </div>
-
-            <div cLass="mb-6">
-              <label cLass="form-label">Message:</abe1>
-              <textarea name=""class="form-control" placeholder rows="6"></textarea>
-
-              </div>
-            </div>
       </div>
-
+        
     </section>
+
+    <section id="contact">
+      <div class="container-fluid">
+          <div class="container">
+          <div>
+              <h2 class="text-center display-3 fw-bold mb-3"">Contact Us</h2>
+          </div>   
+          
+          <div class="row">
+              <div class="col-md-7 shadow rounded p-5">
+              <div class="row">
+                  <div class="col mb-3">
+                      <label class="form-label">First Name</label>
+                      <input type="text" class="form-control" placeholder="firstname">
+                  </div>
+                  <div class="col mb-3">
+                      <label class="form-label">Last name</label>
+                      <input type="text" class="form-control" placeholder="lastname">
+                  </div>
+                  <div class="mb-3">
+                      <label class="form-label">Email</label>
+                      <input type="email" class="form-control" placeholder="youremail@gmail.com">
+                  </div>
+                  <div class="mb-3">
+                      <label class="form-label">Message</label>
+                      <textarea name="" class="form-control" placeholder="write your message here" rows="5"></textarea>
+
+                  </div>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      Submit
+                  </button>
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Hello</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                          Thank You
+                          </div>
+                          <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Submit</button>
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+                  
+              </div>
+          </div>
+          <div class="col-md-5">
+              <div class="ml-5">
+                  <img class="img-fluid" src="assets/gambar.png" alt="y" >
+              </div>
+          </div>
+       
+
+          </div>
+      </div>
+      </div>
+  </section>
 
     <footer class="container-sm">
       <span class="text-muted">Copyright © 2022 All Rights Reserved by Our Company</span>
