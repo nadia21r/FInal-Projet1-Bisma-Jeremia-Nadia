@@ -40,13 +40,43 @@
         </div>
       </div>
     </nav>
+
+        <form name="formTodo">
+            <table>
+             <tbody >
+                <tr>
+                    <td><label for="todo">todo</label></td>
+                    <td><input type="text" id="todo" name="todo"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="tambahkan"></td>
+                </tr>
+             </tbody>  
+            </table>
+        </form>
+
+        <h1>Todolist</h1>
+
+        <table>
+            <thead>
+           
+            <tr>
+            <th>filter</th>
+            <th><input type="text" name="pencarian" id="pencarian"></th>
+            </tr>
+            </thead>
+            <tbody id="bodyTodolist">
+              <tr>
+            <td><input type="button" value="Done"></td>
+            <td>deskripsi </td>
+              </tr>
+            </tbody>
+        </table>
+        
+       
     
-
-    <section id="about">
-        <div>
-          <h1 class=" text-center display-3 fw-bold mb-3">About Us</h1>
-          <p class="text-muted lead mb-6 ml-5">2018 was the beginning of the formation of Our Company, our company was formed starting from frequent gatherings and our high enthusiasm to build the world of websites in industry 4.0. our company accepts application and website creation services. In general, Website creation is implemented in a newly formed company for branding of the company.</p>
-
+    <script src="index.js"></script>
     
 
     <footer class="container-sm">
