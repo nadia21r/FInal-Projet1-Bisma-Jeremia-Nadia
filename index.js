@@ -19,7 +19,7 @@ function tambahTodolist(index,todo){
 
     const buttonDone = document.createElement("input");
     buttonDone.type= "button";
-    buttonDone.value= "done";
+    buttonDone.value= "hapus";
     buttonDone.onclick = function(){
      removeTodoList(index);
     }; 
