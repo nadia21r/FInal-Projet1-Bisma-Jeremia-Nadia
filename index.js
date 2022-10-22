@@ -1,15 +1,39 @@
 const todolist = [];
 
+function simpanToDoList(){
+    localStorage.setItem('jeremiaaaa', JSON.stringify(todolist));     
+}
+
+function loadToDoList(){
+    const arrstr = JSON.parse(localStorage.getItem('jeremiaaaa'))
+    if(arrstr){ 
+        for(let [index,data] of arrstr.entries()){
+            todolist.push(data)
+        }
+    }
+}
+
 function hapusTodolist(){
     const bodyTodolist = document.getElementById("bodyTodolist");
     while(bodyTodolist.firstChild){
         bodyTodolist.removeChild(bodyTodolist.firstChild);
     }
+    while(todolist.length > 0) {
+        todolist.pop();
+    }
 }
+
+function refreshToDoList(){
+    const bodyTodolist = document.getElementById("bodyTodolist");
+    while(bodyTodolist.firstChild){
+        bodyTodolist.removeChild(bodyTodolist.firstChild);
+    }
+}
+
 function removeTodoList(index){
     todolist.splice(index, 1);
+    simpanToDoList();
     tampilanTodolist();
-
 }
 
 function tambahTodolist(index,todo){
@@ -19,9 +43,10 @@ function tambahTodolist(index,todo){
 
     const buttonDone = document.createElement("input");
     buttonDone.type= "button";
-    buttonDone.value= "hapus";
+    buttonDone.value= "Hapus";
     buttonDone.onclick = function(){
-     removeTodoList(index);
+        removeTodoList(index);
+        tr.remove();
     }; 
     tdButton.appendChild(buttonDone);
 
@@ -35,9 +60,7 @@ function tambahTodolist(index,todo){
 }
 
 function tampilanTodolist(){
-
-    hapusTodolist();
-    
+    refreshToDoList();
     for (let i = 0; i < todolist.length; i++) {
       const todo =  todolist[i];
 
@@ -59,16 +82,23 @@ document.forms['formTodo'].onsubmit = function (event){
     document.forms['formTodo'].reset();
     console.info(todolist);
     tampilanTodolist();
+    simpanToDoList();
 
 
 };
+
 const cariinput = document.getElementById("pencarian");
-    cariinput.onkeyup = function (){
-        tampilanTodolist();
-    }
-    cariinput.onkeydown = function (){
-        tampilanTodolist();
-    } 
-tampilanTodolist();
+cariinput.onkeyup = function (){
+    tampilanTodolist();
+}
+cariinput.onkeydown = function (){
+    tampilanTodolist();
+} 
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    loadToDoList();
+    tampilanTodolist();
+});
+
 
 
